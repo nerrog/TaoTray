@@ -1,0 +1,24 @@
+﻿<Window x:Class="TaoTray.Core.UI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:TaoTray.Properties"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:local="clr-namespace:TaoTray.Core.UI"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.UI_LOGIN_TITLE}" Height="450" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock FontSize="20" Text="{x:Static properties:Resources.UI_LOGIN_LOGIN}"/>
+            <Button HorizontalAlignment="Right" Margin="5,0" Content="  OK  " x:Name="OK_Button" Click="OK_Button_Click"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <wv2:WebView2 Name="webView2" Source="https://www.hoyolab.com/home"/>
+        </Grid>
+    </Grid>
+</Window>

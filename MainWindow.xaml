@@ -1,0 +1,27 @@
+﻿<Window x:Class="TaoTray.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:TaoTray.Properties"
+        xmlns:local="clr-namespace:TaoTray"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <tb:TaskbarIcon x:Name="NotifyIcon"
+                IconSource="/Resources/icon.ico"
+                ToolTipText="TaoTray" >
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="ShowMainWindow" Header="{x:Static properties:Resources.UI_MENU_ITEM_SETTINGS}">
+                    </MenuItem>
+                    <MenuItem x:Name="CloseMenuItem" Header="{x:Static properties:Resources.UI_MENU_ITEM_CLOSE}">
+                    </MenuItem>
+                    <MenuItem x:Name="TerminateMenuItem" Header="{x:Static properties:Resources.UI_MENU_ITEM_EXIT}">
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Grid>
+</Window>

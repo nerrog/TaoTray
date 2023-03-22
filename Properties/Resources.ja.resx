@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UI_MENU_ITEM_CLOSE" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="UI_MENU_ITEM_SETTINGS" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="UI_MENU_ITEM_EXIT" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="UI_INFO_REAL_TIME_NOTE" xml:space="preserve">
+    <value>リアルタイムノート</value>
+  </data>
+  <data name="UI_INFO_LAST_UPDATED" xml:space="preserve">
+    <value>最終更新: {0}</value>
+  </data>
+  <data name="UI_INFO_RESIN_RECOVERY_TIME" xml:space="preserve">
+    <value>補充まで</value>
+  </data>
+  <data name="UI_INFO_RESIN_RECOVERY_ETA" xml:space="preserve">
+    <value>補充完了時刻</value>
+  </data>
+  <data name="UI_INFO_EXPEDITION" xml:space="preserve">
+    <value>探索派遣</value>
+  </data>
+  <data name="UI_INFO_DAILY" xml:space="preserve">
+    <value>デイリー任務</value>
+  </data>
+  <data name="UI_INFO_WEEKLY_BOSS" xml:space="preserve">
+    <value>週ボス</value>
+  </data>
+  <data name="UI_INFO_HOME_COIN" xml:space="preserve">
+    <value>洞天宝銭</value>
+  </data>
+  <data name="UI_INFO_TRANSFORMER" xml:space="preserve">
+    <value>参量物質変化器</value>
+  </data>
+  <data name="UI_INFO_HOME_COIN_RECOVERY" xml:space="preserve">
+    <value>回復まであと{0}</value>
+  </data>
+  <data name="TIME_TODAY" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="TIME_TOMORROW" xml:space="preserve">
+    <value>明日</value>
+  </data>
+  <data name="TIME_ETA" xml:space="preserve">
+    <value>{0}時間{1}分</value>
+  </data>
+  <data name="STATUS_AVAILABLE" xml:space="preserve">
+    <value>使用可能</value>
+  </data>
+  <data name="TIME_DAY" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="TIME_HOUR" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="TIME_MINUTE" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="UI_CONFIG_TITLE" xml:space="preserve">
+    <value>TaoTray設定</value>
+  </data>
+  <data name="UI_CONFIG_NOW_LOGIN" xml:space="preserve">
+    <value>ログイン中のアカウント</value>
+  </data>
+  <data name="UI_CONFIG_UPDATE_CYCLE" xml:space="preserve">
+    <value>更新間隔 (HH:MM:SS)</value>
+  </data>
+  <data name="UI_CONFIG_NOTIFY" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="UI_CONFIG_RESIN" xml:space="preserve">
+    <value>天然樹脂</value>
+  </data>
+  <data name="UI_CONFIG_NOTIFY_TIME" xml:space="preserve">
+    <value>分前に通知</value>
+  </data>
+  <data name="UI_CONFIG_DAILY_NOTIFY" xml:space="preserve">
+    <value>デイリー通知</value>
+  </data>
+  <data name="UI_CONFIG_DAILY_NOTIFY_TIME" xml:space="preserve">
+    <value>通知時間 (HH:MM)</value>
+  </data>
+  <data name="UI_CONFIG_ENABLE" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="UI_CONFIG_DAILY_NOTIFY_WEEKLY_BOSS" xml:space="preserve">
+    <value>週ボス未完了</value>
+  </data>
+  <data name="UI_CONFIG_DAILY_NOTIFY_DAILY_MISSION" xml:space="preserve">
+    <value>デイリー未完了</value>
+  </data>
+  <data name="UI_CONFIG_CLOSE" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="UI_CONFIG_SAVE" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="UI_LOGIN_LOGIN" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="UI_LOGIN_NOT_LOGGED_IN" xml:space="preserve">
+    <value>ログインしてください</value>
+  </data>
+  <data name="UI_ERROR" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="UI_LOGIN_ACCOUNT_NOT_FOUND" xml:space="preserve">
+    <value>アカウントが見つかりませんでした。</value>
+  </data>
+  <data name="NOTIFY_LOGIN_SUCCESSFUL" xml:space="preserve">
+    <value>ログイン成功</value>
+  </data>
+  <data name="NOTIFY_LOGIN_SUCCESSFUL_DESC" xml:space="preserve">
+    <value>トレイのアイコンをクリックして情報を表示</value>
+  </data>
+  <data name="UI_LOGIN_TITLE" xml:space="preserve">
+    <value>HoyoLabにログイン</value>
+  </data>
+  <data name="UI_ACCOUNT_TITLE" xml:space="preserve">
+    <value>アカウントを選択</value>
+  </data>
+  <data name="UI_ACCOUNT_NICK_NAME" xml:space="preserve">
+    <value>ニックネーム</value>
+  </data>
+  <data name="UI_ACCOUNT_UID" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="UI_ACCOUNT_LEVEL" xml:space="preserve">
+    <value>レベル</value>
+  </data>
+  <data name="STATUS_EXPEDITION_ON_GOING" xml:space="preserve">
+    <value>探索中</value>
+  </data>
+  <data name="STATUS_EXPEDITION_FINISHED" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="NOTIFY_ALERT_DAILY" xml:space="preserve">
+    <value>デイリー任務が未クリアです</value>
+  </data>
+  <data name="NOTIFY_ALERT_DAILY_EXTRA_REWARD" xml:space="preserve">
+    <value>デイリー任務の報告がまだです</value>
+  </data>
+  <data name="NOTIFY_ALERT_WEEKLY_BOSS" xml:space="preserve">
+    <value>週ボスの樹脂消費半額を使い切っていません</value>
+  </data>
+  <data name="ERROR_FETCH_DATA" xml:space="preserve">
+    <value>データを取得できません</value>
+  </data>
+  <data name="ERROR_FETCH_USER_DATA" xml:space="preserve">
+    <value>ユーザー情報を取得できません</value>
+  </data>
+  <data name="ERROR_NULL_DATA" xml:space="preserve">
+    <value>データがnullです</value>
+  </data>
+  <data name="NOTIFY_ERROR" xml:space="preserve">
+    <value>データ取得失敗</value>
+  </data>
+  <data name="NOTIFY_RESIN_RECOVERY" xml:space="preserve">
+    <value>残り{0}で天然樹脂が全回復します</value>
+  </data>
+  <data name="NOTIFY_HOME_COIN_RECOVERY" xml:space="preserve">
+    <value>残り{0}で洞天宝銭が全回復します</value>
+  </data>
+  <data name="NOTIFY_TRANSFORMER_AVAILABLE" xml:space="preserve">
+    <value>参量物質変化器使用可能!</value>
+  </data>
+  <data name="NOTIFY_EXPEDITION_COMPLETED" xml:space="preserve">
+    <value>探索派遣全員完了しました</value>
+  </data>
+</root>

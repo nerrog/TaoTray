@@ -1,0 +1,29 @@
+﻿<Window x:Class="TaoTray.Core.UI.AccountSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:TaoTray.Properties"
+        xmlns:local="clr-namespace:TaoTray.Core.UI"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.UI_ACCOUNT_TITLE}" Height="200" Width="300" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" x:Name="AccountList">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_NICK_NAME}" DisplayMemberBinding="{Binding nickname}"/>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_UID}" DisplayMemberBinding="{Binding game_uid}"/>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_LEVEL}" DisplayMemberBinding="{Binding level}"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+        <Grid Grid.Row="1">
+            <Button Content=" OK " HorizontalAlignment="Right" x:Name="OK_Button" Click="OK_Button_Click"/>
+        </Grid>
+    </Grid>
+</Window>
