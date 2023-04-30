@@ -1,4 +1,5 @@
 # TaoTray
+[![.NET Core Desktop](https://github.com/nerrog/TaoTray/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/nerrog/TaoTray/actions/workflows/dotnet-desktop.yml)
 ![image](.github/Assets/screenshot.png)
 
 Windows向け原神ステータス確認ソフト
