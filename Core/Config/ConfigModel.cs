@@ -1,6 +1,6 @@
 ﻿namespace TaoTray.Core.Config
 {
-    internal class ConfigModel
+    public class ConfigModel
     {
         public int ConfigVersion { get; set; } = 1;
         public string LoginLtoken { get; set; } = "";
@@ -11,7 +11,7 @@
         public NotifyConfig NotifyConfig { get; set; } = new NotifyConfig();
     }
 
-    internal class NotifyConfig
+    public class NotifyConfig
     {
         public bool ResinRecovery { get; set; } = true;
         public int ResinRecoveryMinutes { get; set; } = 20;
@@ -22,7 +22,7 @@
         public DailyNotify DailyNotify { get; set; } = new DailyNotify();
     }
 
-    internal class DailyNotify
+    public class DailyNotify
     {
         public bool Enable { get; set; } = true;
         public string NotifyTime { get; set; } = "23:00";

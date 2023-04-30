@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows;
+using TaoTray.Core.UI;
 
 namespace TaoTray
 {
@@ -59,6 +60,12 @@ namespace TaoTray
             App.AppConfig.NotifyConfig.DailyNotify.DailyMission = (bool)DailyMissionEnable.IsChecked!;
 
             App.LoadAndStart();
+            this.Close();
+        }
+
+        private void AccountChange_Click(object sender, RoutedEventArgs e)
+        {
+            new LoginWindow().Show();
             this.Close();
         }
     }

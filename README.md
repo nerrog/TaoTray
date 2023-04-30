@@ -26,6 +26,8 @@ Windows向け原神ステータス確認ソフト
 You cannot change the language in the in-app settings at the moment,
 so please open `config.json` and change `Language` to `en-us` manually.
 
+Translated using DeepL. If you find any errors, please send me a pull request.
+
 ## 自動起動のやり方
 - ドキュメントやAppData内など安全な場所にソフトのフォルダを移動させてください。
 - Win + Rで`shell:startup`と入力してスタートアップフォルダを開きます

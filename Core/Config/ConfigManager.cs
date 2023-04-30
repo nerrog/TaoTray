@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text.Json;
+using System.Windows;
 
 namespace TaoTray.Core.Config
 {
@@ -9,20 +11,28 @@ namespace TaoTray.Core.Config
         public ConfigManager() { }
         public ConfigModel GetConfig()
         {
-            if (File.Exists(ConfigPath))
+            try
             {
-                using (StreamReader sr = new StreamReader(ConfigPath))
+                if (File.Exists(ConfigPath))
                 {
-                    var cfg_txt = sr.ReadToEnd();
-                    var cfg = JsonSerializer.Deserialize<ConfigModel>(cfg_txt);
-                    if (cfg != null) App.AppConfig = cfg;
+                    using (StreamReader sr = new StreamReader(ConfigPath))
+                    {
+                        var cfg_txt = sr.ReadToEnd();
+                        var cfg = JsonSerializer.Deserialize<ConfigModel>(cfg_txt);
+                        if (cfg != null) App.AppConfig = cfg;
+                    }
+                    return App.AppConfig;
                 }
-                return App.AppConfig;
-            }
-            else
+                else
+                {
+                    throw new FileNotFoundException("Config file not found.");
+                }
+            }catch(Exception e)
             {
-                throw new FileNotFoundException("Config file not found.");
+                MessageBox.Show(String.Format(Properties.Resources.ERROR_CONFIG_NOT_VALID, e.Message), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                throw new FileNotFoundException("Config file not valid.");
             }
+
         }
 
         public void SaveConfig(ConfigModel? config = null)

@@ -61,6 +61,17 @@ namespace TaoTray.Properties {
         }
         
         /// <summary>
+        ///   Configuration file is not valid
+        ///Please re-login
+        ///Error {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ERROR_CONFIG_NOT_VALID {
+            get {
+                return ResourceManager.GetString("ERROR_CONFIG_NOT_VALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cannot retrieve data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ERROR_FETCH_DATA {
@@ -291,6 +302,24 @@ namespace TaoTray.Properties {
         public static string UI_ACCOUNT_UID {
             get {
                 return ResourceManager.GetString("UI_ACCOUNT_UID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Account Change に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UI_CONFIG_ACCOUNT_CHANGE {
+            get {
+                return ResourceManager.GetString("UI_CONFIG_ACCOUNT_CHANGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Right click to change account に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UI_CONFIG_ACCOUNT_CHANGE_TOOL_TIP {
+            get {
+                return ResourceManager.GetString("UI_CONFIG_ACCOUNT_CHANGE_TOOL_TIP", resourceCulture);
             }
         }
         

@@ -288,4 +288,15 @@
   <data name="NOTIFY_EXPEDITION_COMPLETED" xml:space="preserve">
     <value>All expedition completed.</value>
   </data>
+  <data name="UI_CONFIG_ACCOUNT_CHANGE" xml:space="preserve">
+    <value>Account Change</value>
+  </data>
+  <data name="UI_CONFIG_ACCOUNT_CHANGE_TOOL_TIP" xml:space="preserve">
+    <value>Right click to change account</value>
+  </data>
+  <data name="ERROR_CONFIG_NOT_VALID" xml:space="preserve">
+    <value>Configuration file is not valid
+Please re-login
+Error {0}</value>
+  </data>
 </root>

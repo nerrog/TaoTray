@@ -288,4 +288,15 @@
   <data name="NOTIFY_EXPEDITION_COMPLETED" xml:space="preserve">
     <value>探索派遣全員完了しました</value>
   </data>
+  <data name="UI_CONFIG_ACCOUNT_CHANGE" xml:space="preserve">
+    <value>アカウント変更</value>
+  </data>
+  <data name="UI_CONFIG_ACCOUNT_CHANGE_TOOL_TIP" xml:space="preserve">
+    <value>右クリックでアカウント変更</value>
+  </data>
+  <data name="ERROR_CONFIG_NOT_VALID" xml:space="preserve">
+    <value>設定ファイルが有効ではありません
+再ログインしてください
+エラー{0}</value>
+  </data>
 </root>

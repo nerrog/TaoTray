@@ -22,7 +22,13 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Margin="5">
             <TextBlock FontSize="15" Text="{x:Static properties:Resources.UI_CONFIG_NOW_LOGIN}"/>
-            <TextBlock FontSize="13" FontWeight="Bold" HorizontalAlignment="Right" x:Name="AccountInfo" Text="UserName | 0000000"/>
+            <TextBlock FontSize="13" FontWeight="Bold" HorizontalAlignment="Right" x:Name="AccountInfo" Text="UserName | 0000000" ToolTip="{x:Static properties:Resources.UI_CONFIG_ACCOUNT_CHANGE_TOOL_TIP}">
+                <TextBlock.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem x:Name="AccountChange" Header="{x:Static properties:Resources.UI_CONFIG_ACCOUNT_CHANGE}" Click="AccountChange_Click"/>
+                    </ContextMenu>
+                </TextBlock.ContextMenu>
+            </TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="5">
             <TextBlock FontSize="15" Text="{x:Static properties:Resources.UI_CONFIG_UPDATE_CYCLE}"/>
