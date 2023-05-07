@@ -37,6 +37,10 @@
                     <TextBlock FontSize="15" Text="{x:Static properties:Resources.UI_INFO_RESIN_RECOVERY_ETA}"/>
                     <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="ResinRecoveryTimeETA" Text="明日 8:50"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock FontSize="15" Text="{x:Static properties:Resources.UI_INFO_CONDENSED_RESIN_RECOVERY_TIME}"/>
+                    <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="CondensedResinRecoveryTime" Text="12時間50分 (4)"/>
+                </StackPanel>
             </StackPanel>
             <Border BorderThickness="1" BorderBrush="Gray"/>
         </StackPanel>

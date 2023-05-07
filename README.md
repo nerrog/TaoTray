@@ -35,6 +35,11 @@ Translated using DeepL. If you find any errors, please send me a pull request.
 - Win + Rで`shell:startup`と入力してスタートアップフォルダを開きます
 - `TaoTray.exe`のショートカットを作成してスタートアップフォルダに移動させます。
 
+## アイコンの設定方法
+- TaoTray.exeが入っているフォルダに`icon.png`をいう名前を付けてアイコンにしたいファイルを保存すると
+自動的に設定されます
+
+
 # 免責
 本ソフトウェアは[MITライセンス](LICENSE.txt)にて提供されています。
 

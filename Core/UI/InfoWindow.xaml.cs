@@ -32,6 +32,7 @@ namespace TaoTray
             var ResinRecoveryDateTime = DailyNote.ToTime(data.ResinRecoveryTime).CompleteTime;
             ResinRecoveryTime.Text = " " + ConvertTime(ResinRecoveryDateTime);
             ResinRecoveryTimeETA.Text = " " + GetETA(ResinRecoveryDateTime);
+            CondensedResinRecoveryTime.Text = " " + GetCondensedResinTime(data.CurrentResin, data.MaxResin);
 
             Expeditions.ItemsSource = ExpeditionModelConverter.Convert(data);
 
@@ -82,5 +83,38 @@ namespace TaoTray
             }
 
         }
+
+        private string GetCondensedResinTime(int currentResin, int maxResin)
+        {
+            int RequirementResin = 0;
+            int CondensedResinNum = 0;
+
+            if (currentResin >= maxResin)
+            {
+                RequirementResin = 0;
+            }
+            else
+            {
+                if (currentResin >= Constant.CONDENSED_RESIN_NUM)
+                {
+                    int n = currentResin / Constant.CONDENSED_RESIN_NUM; //現状作成可能数
+                    int c = (n + 1) * Constant.CONDENSED_RESIN_NUM; //次作成するために必要な天然樹脂数
+                    RequirementResin = c - currentResin; //必要な天然樹脂数
+                    CondensedResinNum = n + 1;
+                }
+                else
+                {
+                    //40として計算
+                    RequirementResin = Constant.CONDENSED_RESIN_NUM - currentResin;
+                    CondensedResinNum = 1;
+                }
+            }
+
+
+            int t = RequirementResin * Constant.RESIN_RECOVERY_MIN; //必要な時間(分)
+            DateTime dt = DateTime.Now.AddMinutes(t);
+            return ConvertTime(dt) + " (" + CondensedResinNum + ")";
+        }
+
     }
 }

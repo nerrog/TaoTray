@@ -299,4 +299,10 @@
 再ログインしてください
 エラー{0}</value>
   </data>
+  <data name="UI_INFO_CONDENSED_RESIN_RECOVERY_TIME" xml:space="preserve">
+    <value>濃縮樹脂作成可能まで</value>
+  </data>
+  <data name="UI_MENU_ITEM_UPDATE_DATA" xml:space="preserve">
+    <value>今すぐデータを更新</value>
+  </data>
 </root>

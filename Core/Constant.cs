@@ -14,5 +14,7 @@
         internal readonly static int EXPEDITION_MAX_TIME = 20 * 60 * 60;
         internal readonly static string GENSHIN_DAILY_RESET_TIME_JST = "5:00";
         internal readonly static int REST_TIME_SPAN_MIN = 20;
+        internal readonly static int CONDENSED_RESIN_NUM = 40;
+        internal readonly static int RESIN_RECOVERY_MIN = 8;
     }
 }

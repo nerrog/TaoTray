@@ -299,4 +299,10 @@
 Please re-login
 Error {0}</value>
   </data>
+  <data name="UI_INFO_CONDENSED_RESIN_RECOVERY_TIME" xml:space="preserve">
+    <value>Until concentrated resin can be made</value>
+  </data>
+  <data name="UI_MENU_ITEM_UPDATE_DATA" xml:space="preserve">
+    <value>Update your data now</value>
+  </data>
 </root>

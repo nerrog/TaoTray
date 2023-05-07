@@ -11,28 +11,28 @@ namespace TaoTray.Core.Config
         public ConfigManager() { }
         public ConfigModel GetConfig()
         {
-            try
+            if (File.Exists(ConfigPath))
             {
-                if (File.Exists(ConfigPath))
+                using (StreamReader sr = new StreamReader(ConfigPath))
                 {
-                    using (StreamReader sr = new StreamReader(ConfigPath))
+                    try
                     {
                         var cfg_txt = sr.ReadToEnd();
                         var cfg = JsonSerializer.Deserialize<ConfigModel>(cfg_txt);
                         if (cfg != null) App.AppConfig = cfg;
+                    }catch (Exception ex)
+                    {
+                        MessageBox.Show(String.Format(Properties.Resources.ERROR_CONFIG_NOT_VALID, ex.Message), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        throw new FileNotFoundException("Config file not valid.");
                     }
-                    return App.AppConfig;
-                }
-                else
-                {
-                    throw new FileNotFoundException("Config file not found.");
-                }
-            }catch(Exception e)
-            {
-                MessageBox.Show(String.Format(Properties.Resources.ERROR_CONFIG_NOT_VALID, e.Message), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                throw new FileNotFoundException("Config file not valid.");
-            }
 
+                }
+                return App.AppConfig;
+            }
+            else
+            {
+                throw new FileNotFoundException("Config file not found.");
+            }
         }
 
         public void SaveConfig(ConfigModel? config = null)

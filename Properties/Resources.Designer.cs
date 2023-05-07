@@ -450,6 +450,15 @@ namespace TaoTray.Properties {
         }
         
         /// <summary>
+        ///   Until concentrated resin can be made に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UI_INFO_CONDENSED_RESIN_RECOVERY_TIME {
+            get {
+                return ResourceManager.GetString("UI_INFO_CONDENSED_RESIN_RECOVERY_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Daily Commission に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UI_INFO_DAILY {
@@ -599,6 +608,15 @@ namespace TaoTray.Properties {
         public static string UI_MENU_ITEM_SETTINGS {
             get {
                 return ResourceManager.GetString("UI_MENU_ITEM_SETTINGS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Update your data now に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UI_MENU_ITEM_UPDATE_DATA {
+            get {
+                return ResourceManager.GetString("UI_MENU_ITEM_UPDATE_DATA", resourceCulture);
             }
         }
     }
