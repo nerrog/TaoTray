@@ -12,12 +12,17 @@ Windows向け原神ステータス確認ソフト
 
 # 要件(Requirements)
 - Windows10・11
-- [.NET6.0以上のランタイム](https://dotnet.microsoft.com/ja-jp/download/dotnet)
-- [Microsoft Edge WebView2 ランタイム](https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/#download-section)
 - HoyoLab通行証(ゲーム内アカウントと紐付け済み)
 
+.NET 6.0とWebViewはインストーラーからインストールされます
+
+# ダウンロード(Download)
+- [Releases](https://github.com/nerrog/TaoTray/releases)から最新のインストーラーをダウンロード
+- インストーラーの指示に従いインストール
+- スタートアップに自動的に登録されます
+
 # 使い方(usage)
-- TaoTray.exeを起動する
+- TaoTrayを起動する
 - ブラウザが出てくるのでログインしたあと「OK」ボタンを押す
 - アカウントが複数ある場合は選択画面が出てくるので選択する
 - 正常に追加できた通知が飛んでくれば完了
@@ -30,10 +35,6 @@ so please open `config.json` and change `Language` to `en-us` manually.
 
 Translated using DeepL. If you find any errors, please send me a pull request.
 
-## 自動起動のやり方
-- ドキュメントやAppData内など安全な場所にソフトのフォルダを移動させてください。
-- Win + Rで`shell:startup`と入力してスタートアップフォルダを開きます
-- `TaoTray.exe`のショートカットを作成してスタートアップフォルダに移動させます。
 
 ## アイコンの設定方法
 - TaoTray.exeが入っているフォルダに`icon.png`をいう名前を付けてアイコンにしたいファイルを保存すると
