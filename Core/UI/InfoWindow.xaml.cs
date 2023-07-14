@@ -3,6 +3,7 @@ using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using TaoTray.Core;
+using TaoTray.Core.Cache;
 
 namespace TaoTray
 {
@@ -23,11 +24,22 @@ namespace TaoTray
 
         internal void DataUpdated(DailyNoteData data, GenshinStatsData user)
         {
+            //GetIcon
+            if (App.imageCache == null)
+            {
+                App.imageCache = new CacheManager().GetImageCache();
+            }
+
+            ResinIcon.Source = GetImage("RESIN");
+            DailyImage.Source = GetImage("DAILY_TASK");
+            WeeklyBossImage.Source = GetImage("WEEKLY_BOSS");
+            HomeCoinImage.Source = GetImage("HOME_COIN");
+            TransformerImage.Source = GetImage("TRANSFORMER");
+
             //UserInfo
             UserInfoText.Text = user.Role!.NickName + " | " + "Lv." + user.Role.Level;
             LastUpdatedText.Text = string.Format(Properties.Resources.UI_INFO_LAST_UPDATED, App.LatestUpdate.ToString());
             //Resin
-            ResinIcon.Source = new BitmapImage(new Uri(Constant.HoyoLabUrls.ICON_RESIN));
             ResinText.Text = data.CurrentResin + "/" + data.MaxResin;
             var ResinRecoveryDateTime = DailyNote.ToTime(data.ResinRecoveryTime).CompleteTime;
             ResinRecoveryTime.Text = " " + ConvertTime(ResinRecoveryDateTime);
@@ -36,16 +48,26 @@ namespace TaoTray
 
             Expeditions.ItemsSource = ExpeditionModelConverter.Convert(data);
 
-            DailyImage.Source = new BitmapImage(new Uri(Constant.HoyoLabUrls.ICON_DAILY_TASK));
             DailyNum.Text = " " + data.FinishedTaskNum + "/" + data.ToatalTaskNum;
-            WeeklyBossImage.Source = new BitmapImage(new Uri(Constant.HoyoLabUrls.ICON_WEEKLY_BOSS));
+            //
             WeeklyBossNum.Text = " " + data.RemainResinDiscountNum + "/ " + data.ResionDiscountNumLimit;
-            HomeCoinImage.Source = new BitmapImage(new Uri(Constant.HoyoLabUrls.ICON_HOME_COIN));
+            //
             HomeCoinNum.Text = " " + data.CurrentHomeCoin + "/" + data.MaxHomeCoin;
             HomeCoinNum.ToolTip = string.Format(Properties.Resources.UI_INFO_HOME_COIN_RECOVERY, ConvertTime(DailyNote.ToTime(data.HomeCoinRecoveryTime).CompleteTime));
-            TransformerImage.Source = new BitmapImage(new Uri(Constant.HoyoLabUrls.ICON_TRANSFORMER));
+            //
             TransformerETA.Text = " " + GetTransformerTime(data.Transformer!.RecoveryTime!);
         }
+
+        private BitmapImage GetImage(string itemId)
+        {
+            var item = App.imageCache?.Find(i => i.ItemID == itemId);
+
+            if (item == null || item.Item == null) throw new NullReferenceException();
+
+            return new BitmapImage(new Uri(item.Item));
+
+        }
+
 
         private string GetETA(DateTime dt)
         {

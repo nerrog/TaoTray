@@ -97,5 +97,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: TaoTray
-        path: TaoTray_${{ matrix.configuration }}.zip
+        name: TaoTray_${{ matrix.configuration }}
+        path: TaoTray.zip

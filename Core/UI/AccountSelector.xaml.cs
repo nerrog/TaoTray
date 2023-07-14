@@ -10,7 +10,7 @@ namespace TaoTray.Core.UI
     public partial class AccountSelector : Window
     {
         internal EventHandler<CompletedEventArgs>? Completed;
-        private System.Collections.Generic.List<List> Value;
+        private System.Collections.Generic.List<GameRole> Value;
         private bool CloseFlag = false;
 
         public AccountSelector(GameRoles roles)
