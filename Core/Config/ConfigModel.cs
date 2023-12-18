@@ -1,10 +1,13 @@
-﻿namespace TaoTray.Core.Config
+﻿using HuTao.NET;
+
+namespace TaoTray.Core.Config
 {
     public class ConfigModel
     {
-        public int ConfigVersion { get; set; } = 1;
+        public int ConfigVersion { get; set; } = 2;
         public string LoginLtoken { get; set; } = "";
         public string LoginLtuid { get; set; } = "";
+        public CookieV2 CookieV2 { get; set; } = new CookieV2();
         public int InGameUid { get; set; } = 0;
         public string Language { get; set; } = "ja-jp";
         public string UpdateCycle { get; set; } = "00:08:00";

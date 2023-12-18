@@ -1,6 +1,9 @@
-﻿using HuTao.NET.Models;
+﻿using Hardcodet.Wpf.TaskbarNotification;
+using HuTao.NET.Models;
+using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Windows.Controls;
+using System.Windows.Markup;
 using System.Windows.Media.Imaging;
 using TaoTray.Core;
 using TaoTray.Core.Cache;
@@ -12,13 +15,30 @@ namespace TaoTray
     /// </summary>
     public partial class InfoWindow : UserControl
     {
-        public InfoWindow()
+        public InfoWindow(TaskbarIcon icon)
         {
             InitializeComponent();
 
             App.DataUpdateEvent += (s, e) => DataUpdated(App.GenshinData, App.UserData);
+
+
             //初回表示時
-            DataUpdated(App.GenshinData, App.UserData);
+            if (App.GenshinData.HomeCoinRecoveryTime == "")
+            {
+                //まだ取得できていない場合
+                new ToastContentBuilder()
+                .AddText("TaoTray")
+                .AddText(Properties.Resources.NOTIFY_PLEASE_WAIT)
+                .Show();
+
+                icon.CloseBalloon();
+                return;
+
+            }
+            else
+            {
+                DataUpdated(App.GenshinData, App.UserData);
+            }
 
         }
 
@@ -58,11 +78,18 @@ namespace TaoTray
             TransformerETA.Text = " " + GetTransformerTime(data.Transformer!.RecoveryTime!);
         }
 
-        private BitmapImage GetImage(string itemId)
+        private BitmapImage? GetImage(string itemId)
         {
             var item = App.imageCache?.Find(i => i.ItemID == itemId);
 
-            if (item == null || item.Item == null) throw new NullReferenceException();
+            if (item == null)
+            {
+                throw new NullReferenceException(nameof(item));
+
+            }else if (item.Item == null)
+            {
+                item.Item = CacheManager.GetUnknownImagePath();
+            }
 
             return new BitmapImage(new Uri(item.Item));
 

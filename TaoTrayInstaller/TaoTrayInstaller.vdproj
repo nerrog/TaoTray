@@ -78,10 +78,15 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.6.0.x64"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.EdgeRuntime"
                     {
-                    "Name" = "8:.NET ランタイム 6.0.20 (x64)"
-                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.6.0.x64"
+                    "Name" = "8:Edge WebView runtime"
+                    "ProductCode" = "8:Microsoft.EdgeRuntime"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.8.0.x64"
+                    {
+                    "Name" = "8:.NET ランタイム 8.0.0 (x64)"
+                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.8.0.x64"
                     }
                 }
             }
@@ -225,15 +230,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TaoTray"
-        "ProductCode" = "8:{AE769CD8-B202-405D-8CF6-4DF258738A9A}"
-        "PackageCode" = "8:{504BC200-98F9-435F-B26D-94B2966FC95C}"
+        "ProductCode" = "8:{9ADA7D17-D6A1-4B99-8289-529838668939}"
+        "PackageCode" = "8:{B850C25A-A6A2-4CF5-9BF0-2E3BBB8C304E}"
         "UpgradeCode" = "8:{7DB64502-0E05-4AD7-8963-B036115BA871}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.2.2"
         "Manufacturer" = "8:nerrog"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

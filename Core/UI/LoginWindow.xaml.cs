@@ -19,23 +19,38 @@ namespace TaoTray.Core.UI
         private async void OK_Button_Click(object sender, RoutedEventArgs e)
         {
             Cookie c = new Cookie();
+            CookieV2 c2 = new CookieV2();
             var cookies = await webView2.CoreWebView2.CookieManager.GetCookiesAsync("https://www.hoyolab.com");
             foreach (var cookie in cookies)
             {
                 if (cookie.Name == "ltuid") c.ltuid = cookie.Value;
                 if (cookie.Name == "ltoken") c.ltoken = cookie.Value;
+
+                if (cookie.Name == "ltoken_v2") c2.ltoken_v2 = cookie.Value;
+                if (cookie.Name == "ltmid_v2") c2.ltmid_v2 = cookie.Value;
+                if (cookie.Name == "ltuid_v2") c2.ltuid_v2 = cookie.Value;
             }
 
             if (c.ltoken == "" || c.ltuid == "")
             {
-                MessageBox.Show(Properties.Resources.UI_LOGIN_NOT_LOGGED_IN, Properties.Resources.UI_ERROR, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                //v2もない場合
+                if (c2.ltoken_v2 == "" || c2.ltmid_v2 == "" || c2.ltuid_v2 == "")
+                {
+                    MessageBox.Show(Properties.Resources.UI_LOGIN_NOT_LOGGED_IN, Properties.Resources.UI_ERROR, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
             }
 
+            //クッキー書き込み
             App.AppConfig.LoginLtuid = c.ltuid;
             App.AppConfig.LoginLtoken = c.ltoken;
+            App.AppConfig.CookieV2 = c2;
 
-            var roles = await new Client(c).GetGenshinRoles();
+            //ltokenが空ならCookieV2を使用する
+            ICookie useCookie = c.ltoken == "" ? c2 : c;
+
+            var roles = await new Client(useCookie).GetGenshinRoles();
 
             if (roles.data!.list.Count == 0)
             {
@@ -44,7 +59,7 @@ namespace TaoTray.Core.UI
             }
             else if (roles.data!.list.Count == 1)
             {
-                AccountSelected(this, new CompletedEventArgs(int.Parse(roles.data!.list[0].game_uid)));
+                AccountSelected(this, new CompletedEventArgs(int.Parse(roles.data!.list[0].GameUid)));
             }
             else
             {

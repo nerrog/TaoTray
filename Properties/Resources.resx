@@ -305,4 +305,7 @@ Error {0}</value>
   <data name="UI_MENU_ITEM_UPDATE_DATA" xml:space="preserve">
     <value>Update your data now</value>
   </data>
+  <data name="NOTIFY_PLEASE_WAIT" xml:space="preserve">
+    <value>Please wait a moment.</value>
+  </data>
 </root>

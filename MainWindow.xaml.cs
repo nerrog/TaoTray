@@ -71,10 +71,10 @@ namespace TaoTray
 
         public void ShowWindow()
         {
-            if (App.AppConfig.LoginLtuid == "") return;
+            if (App.AppConfig.LoginLtuid == "" && App.AppConfig.CookieV2.ltoken_v2 == "") return;
             if (!IsShow)
             {
-                InfoWindow info = new InfoWindow();
+                InfoWindow info = new InfoWindow(NotifyIcon);
                 NotifyIcon.ShowCustomBalloon(info, System.Windows.Controls.Primitives.PopupAnimation.None, null);
                 IsShow = true;
             }

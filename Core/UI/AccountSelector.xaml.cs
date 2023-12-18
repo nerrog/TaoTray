@@ -25,7 +25,7 @@ namespace TaoTray.Core.UI
         {
             if (AccountList.SelectedItem == null) e.Handled = false;
 
-            int uid = int.Parse(Value[AccountList.SelectedIndex].game_uid);
+            int uid = int.Parse(Value[AccountList.SelectedIndex].GameUid);
             Completed?.Invoke(this, new CompletedEventArgs(uid));
             CloseFlag = true;
             this.Close();

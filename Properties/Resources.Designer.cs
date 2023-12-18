@@ -171,6 +171,15 @@ namespace TaoTray.Properties {
         }
         
         /// <summary>
+        ///   Please wait a moment. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NOTIFY_PLEASE_WAIT {
+            get {
+                return ResourceManager.GetString("NOTIFY_PLEASE_WAIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Original Resin will recover with {0} remaining に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string NOTIFY_RESIN_RECOVERY {

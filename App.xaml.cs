@@ -3,8 +3,6 @@ using HuTao.NET.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,7 +27,7 @@ namespace TaoTray
         internal static ConfigManager configManager = new ConfigManager();
         internal static EventHandler? DataUpdateEvent;
 
-        public static Cookie? Cookie;
+        public static ICookie? Cookie;
         public static GenshinUser? GenshinUser;
         public static ClientData? ClientData;
         public static Client? HuTaoClient;
@@ -69,16 +67,37 @@ namespace TaoTray
             }
             catch (System.Exception) { }
             
+            //ログインしていない場合はログインさせる
             if (AppConfig.LoginLtoken == "")
+            {
+                if (AppConfig.CookieV2.ltoken_v2 == "")
+                {
+                    new LoginWindow().Show();
+                    return;
+                }
+            }
+
+            //UIDを取得していない場合もログイン画面にリダイレクト
+            if (AppConfig.InGameUid == 0)
             {
                 new LoginWindow().Show();
                 return;
             }
-            Cookie = new Cookie()
+
+
+            if (AppConfig.LoginLtoken != "")
             {
-                ltoken = AppConfig.LoginLtoken,
-                ltuid = AppConfig.LoginLtuid,
-            };
+                Cookie = new Cookie()
+                {
+                    ltoken = AppConfig.LoginLtoken,
+                    ltuid = AppConfig.LoginLtuid,
+                };
+            }
+            else
+            {
+                Cookie = AppConfig.CookieV2;
+            }
+
             ClientData = new ClientData() { Language = AppConfig.Language };
             HuTaoClient = new Client(Cookie, ClientData);
             GenshinUser = new GenshinUser(AppConfig.InGameUid);
@@ -118,40 +137,4 @@ namespace TaoTray
             Environment.Exit(1);
         }
     }
-
-    class StartupManager
-    {
-        private static string getShortcutPath()
-        {
-            string startupPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
-            return System.IO.Path.Combine(startupPath, "TaoTray.lnk");
-        }
-
-        internal static void createStartupShortcut()
-        {
-            Type? t = Type.GetTypeFromCLSID(new Guid("72C24DD5-D70A-438B-8A42-98424B88AFB8"));
-            if (t == null) return;
-            dynamic? shell = Activator.CreateInstance(t);
-            if (shell == null) return;
-            var shortcut = shell.CreateShortcut(getShortcutPath());
-
-            shortcut.Description = "TaoTray";
-            shortcut.TargetPath = Assembly.GetExecutingAssembly().Location;
-            shortcut.IconLocation = Assembly.GetExecutingAssembly().Location + ",0";
-            shortcut.Save();
-
-            System.Runtime.InteropServices.Marshal.FinalReleaseComObject(shortcut);
-            System.Runtime.InteropServices.Marshal.FinalReleaseComObject(shell);
-        }
-
-        internal static void removeStartupShortcut()
-        {
-            string shortcutPath = getShortcutPath();
-            if (System.IO.File.Exists(shortcutPath))
-            {
-                System.IO.File.Delete(shortcutPath);
-            }
-        }
-    }
-
 }

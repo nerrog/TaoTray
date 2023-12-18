@@ -3,46 +3,46 @@
 
 ![image](.github/Assets/screenshot.png)
 
-WindowsŒü‚¯Œ´_ƒXƒe[ƒ^ƒXŠm”Fƒ\ƒtƒg
+Windowså‘ã‘åŽŸç¥žã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç¢ºèªã‚½ãƒ•ãƒˆ
 
-# “Á’¥
-- ƒ^ƒXƒNƒgƒŒƒCí’“ƒ\ƒtƒg
-- “V‘RŽ÷Ž‰‚ªˆì‚ê‚»‚¤‚È‚Æ‚«‚â’Tõ”hŒ­‚ÌŠ®—¹Žž‚È‚Ç‚É’Ê’m
+# ç‰¹å¾´
+- ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤å¸¸é§ã‚½ãƒ•ãƒˆ
+- å¤©ç„¶æ¨¹è„‚ãŒæº¢ã‚Œãã†ãªã¨ãã‚„æŽ¢ç´¢æ´¾é£ã®å®Œäº†æ™‚ãªã©ã«é€šçŸ¥
 - English Support.
 
-# —vŒ(Requirements)
-- Windows10E11
-- HoyoLab’ÊsØ(ƒQ[ƒ€“àƒAƒJƒEƒ“ƒg‚Æ•R•t‚¯Ï‚Ý)
+# è¦ä»¶(Requirements)
+- Windows10ãƒ»11
+- HoyoLabé€šè¡Œè¨¼(ã‚²ãƒ¼ãƒ å†…ã‚¢ã‚«ã‚¦ãƒ³ãƒˆã¨ç´ä»˜ã‘æ¸ˆã¿)
 
-.NET 6.0‚ÆWebView‚ÍƒCƒ“ƒXƒg[ƒ‰[‚©‚çƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ü‚·
+.NETãƒ©ãƒ³ã‚¿ã‚¤ãƒ ã¨WebViewã¯ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼ã‹ã‚‰ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¾ã™
 
-# ƒ_ƒEƒ“ƒ[ƒh(Download)
-- [Releases](https://github.com/nerrog/TaoTray/releases)‚©‚çÅV‚ÌƒCƒ“ƒXƒg[ƒ‰[‚ðƒ_ƒEƒ“ƒ[ƒh
-- ƒCƒ“ƒXƒg[ƒ‰[‚ÌŽwŽ¦‚É]‚¢ƒCƒ“ƒXƒg[ƒ‹
-- ƒXƒ^[ƒgƒAƒbƒv‚ÉŽ©“®“I‚É“o˜^‚³‚ê‚Ü‚·
+# ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰(Download)
+- [Releases](https://github.com/nerrog/TaoTray/releases)ã‹ã‚‰æœ€æ–°ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
+- ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼ã®æŒ‡ç¤ºã«å¾“ã„ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+- ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã«è‡ªå‹•çš„ã«ç™»éŒ²ã•ã‚Œã¾ã™
 
-# Žg‚¢•û(usage)
-- TaoTray‚ð‹N“®‚·‚é
-- ƒuƒ‰ƒEƒU‚ªo‚Ä‚­‚é‚Ì‚ÅƒƒOƒCƒ“‚µ‚½‚ ‚ÆuOKvƒ{ƒ^ƒ“‚ð‰Ÿ‚·
-- ƒAƒJƒEƒ“ƒg‚ª•¡”‚ ‚éê‡‚Í‘I‘ð‰æ–Ê‚ªo‚Ä‚­‚é‚Ì‚Å‘I‘ð‚·‚é
-- ³í‚É’Ç‰Á‚Å‚«‚½’Ê’m‚ª”ò‚ñ‚Å‚­‚ê‚ÎŠ®—¹
-- ƒ^ƒXƒNƒgƒŒƒC‚ÌŒÓ“‚ÌƒAƒCƒRƒ“‚ðƒNƒŠƒbƒN‚·‚é‚Æ•\Ž¦
-- ƒ^ƒXƒNƒgƒŒƒCƒAƒCƒRƒ“‰EƒNƒŠƒbƒN‚Åƒƒjƒ…[‚ª•\Ž¦
+# ä½¿ã„æ–¹(usage)
+- TaoTrayã‚’èµ·å‹•ã™ã‚‹
+- ãƒ–ãƒ©ã‚¦ã‚¶ãŒå‡ºã¦ãã‚‹ã®ã§ãƒ­ã‚°ã‚¤ãƒ³ã—ãŸã‚ã¨ã€ŒOKã€ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™
+- ã‚¢ã‚«ã‚¦ãƒ³ãƒˆãŒè¤‡æ•°ã‚ã‚‹å ´åˆã¯é¸æŠžç”»é¢ãŒå‡ºã¦ãã‚‹ã®ã§é¸æŠžã™ã‚‹
+- æ­£å¸¸ã«è¿½åŠ ã§ããŸé€šçŸ¥ãŒé£›ã‚“ã§ãã‚Œã°å®Œäº†
+- ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤ã®èƒ¡æ¡ƒã®ã‚¢ã‚¤ã‚³ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨è¡¨ç¤º
+- ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤ã‚¢ã‚¤ã‚³ãƒ³å³ã‚¯ãƒªãƒƒã‚¯ã§ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãŒè¡¨ç¤º
 
-## For use in English (‰pŒê‚ÅŽg‚¤ê‡)
+## For use in English (è‹±èªžã§ä½¿ã†å ´åˆ)
 You cannot change the language in the in-app settings at the moment,
 so please open `config.json` and change `Language` to `en-us` manually.
 
 Translated using DeepL. If you find any errors, please send me a pull request.
 
 
-## ƒAƒCƒRƒ“‚ÌÝ’è•û–@
-- TaoTray.exe‚ª“ü‚Á‚Ä‚¢‚éƒtƒHƒ‹ƒ_‚É`icon.png`‚ð‚¢‚¤–¼‘O‚ð•t‚¯‚ÄƒAƒCƒRƒ“‚É‚µ‚½‚¢ƒtƒ@ƒCƒ‹‚ð•Û‘¶‚·‚é‚Æ
-Ž©“®“I‚ÉÝ’è‚³‚ê‚Ü‚·
+## ã‚¢ã‚¤ã‚³ãƒ³ã®è¨­å®šæ–¹æ³•
+- TaoTray.exeãŒå…¥ã£ã¦ã„ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã«`icon.png`ã‚’ã„ã†åå‰ã‚’ä»˜ã‘ã¦ã‚¢ã‚¤ã‚³ãƒ³ã«ã—ãŸã„ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã™ã‚‹ã¨
+è‡ªå‹•çš„ã«è¨­å®šã•ã‚Œã¾ã™
 
 
-# –ÆÓ
-–{ƒ\ƒtƒgƒEƒFƒA‚Í[MITƒ‰ƒCƒZƒ“ƒX](LICENSE.txt)‚É‚Ä’ñ‹Ÿ‚³‚ê‚Ä‚¢‚Ü‚·B
+# å…è²¬
+æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯[MITãƒ©ã‚¤ã‚»ãƒ³ã‚¹](LICENSE.txt)ã«ã¦æä¾›ã•ã‚Œã¦ã„ã¾ã™ã€‚
 
-–{ƒ\ƒtƒgƒEƒFƒA‹y‚Ñ[HoyoLab”ñŒöŽ®C#ƒ‰ƒbƒp[ƒ‰ƒCƒuƒ‰ƒŠHuTao.NET](https://github.com/nerrog/HuTao.NET)
-‚ÍmiHoYo‹y‚ÑCOGNOSPHERE‚Æ‚ÍˆêØŠÖŒW‚ ‚è‚Ü‚¹‚ñB
+æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢åŠã³[HoyoLabéžå…¬å¼C#ãƒ©ãƒƒãƒ‘ãƒ¼ãƒ©ã‚¤ãƒ–ãƒ©ãƒªHuTao.NET](https://github.com/nerrog/HuTao.NET)
+ã¯miHoYoåŠã³COGNOSPHEREã¨ã¯ä¸€åˆ‡é–¢ä¿‚ã‚ã‚Šã¾ã›ã‚“ã€‚

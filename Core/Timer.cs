@@ -11,7 +11,7 @@ namespace TaoTray.Core
         DispatcherTimer timer;
         internal GenshinInfo info;
         private Dispatcher dispatcher;
-        private NotifyFlag notifyFlag = new Timer.NotifyFlag();
+        private NotifyFlag notifyFlag = new NotifyFlag();
 
         internal Timer(Dispatcher dispatcher)
         {
@@ -34,7 +34,7 @@ namespace TaoTray.Core
             {
                 try
                 {
-                    if (App.AppConfig.LoginLtuid == "") return;
+                    if (App.AppConfig.LoginLtuid == "" && App.AppConfig.CookieV2.ltoken_v2 == "") return;
                     var res = await info.UpdateInfo();
                     if (res != null)
                     {

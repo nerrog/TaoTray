@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq.Expressions;
 using System.Net.Http;
-using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
 
 namespace TaoTray.Core.Cache
 {
@@ -67,6 +63,11 @@ namespace TaoTray.Core.Cache
             });
 
             return ImageCache;
+        }
+
+        internal static string GetUnknownImagePath()
+        {
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "unknown.png");
         }
     }
 
