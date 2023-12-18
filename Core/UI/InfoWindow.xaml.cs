@@ -44,12 +44,6 @@ namespace TaoTray
 
         internal void DataUpdated(DailyNoteData data, GenshinStatsData user)
         {
-            //GetIcon
-            if (App.imageCache == null)
-            {
-                App.imageCache = new CacheManager().GetImageCache();
-            }
-
             ResinIcon.Source = GetImage("RESIN");
             DailyImage.Source = GetImage("DAILY_TASK");
             WeeklyBossImage.Source = GetImage("WEEKLY_BOSS");

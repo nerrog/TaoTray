@@ -25,6 +25,7 @@ namespace TaoTray.Core
             //初回
             TimerEvent(this, EventArgs.Empty);
 
+
             timer.Start();
         }
 

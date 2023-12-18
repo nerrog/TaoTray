@@ -61,11 +61,14 @@ namespace TaoTray
 
         internal static void LoadAndStart()
         {
+            //画像キャッシュ読み込み
+            imageCache = new CacheManager().GetImageCache();
+
             try
             {
                 Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(AppConfig.Language);
             }
-            catch (System.Exception) { }
+            catch (Exception) { }
             
             //ログインしていない場合はログインさせる
             if (AppConfig.LoginLtoken == "")

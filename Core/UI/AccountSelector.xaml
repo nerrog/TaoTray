@@ -15,9 +15,9 @@
         <ListView Grid.Row="0" x:Name="AccountList">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_NICK_NAME}" DisplayMemberBinding="{Binding nickname}"/>
-                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_UID}" DisplayMemberBinding="{Binding game_uid}"/>
-                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_LEVEL}" DisplayMemberBinding="{Binding level}"/>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_NICK_NAME}" DisplayMemberBinding="{Binding NickName}"/>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_UID}" DisplayMemberBinding="{Binding GameUid}"/>
+                    <GridViewColumn Header="{x:Static properties:Resources.UI_ACCOUNT_LEVEL}" DisplayMemberBinding="{Binding Level}"/>
                 </GridView>
             </ListView.View>
 
