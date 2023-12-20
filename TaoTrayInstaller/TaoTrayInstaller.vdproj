@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_08A57166EADF491298CFF6B04CD8D55C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6AC996F5C36E4BB9BE5D1E20B70BF315"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -183,7 +189,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_971AF9E7D0E24B1CBFC8A92ECA2F0720"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -231,7 +237,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TaoTray"
         "ProductCode" = "8:{9ADA7D17-D6A1-4B99-8289-529838668939}"
-        "PackageCode" = "8:{B850C25A-A6A2-4CF5-9BF0-2E3BBB8C304E}"
+        "PackageCode" = "8:{B58940E4-9891-4BAA-8ACA-B4E5A380BE24}"
         "UpgradeCode" = "8:{7DB64502-0E05-4AD7-8963-B036115BA871}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -247,14 +253,14 @@
         "ARPCONTACT" = "8:nerrog"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPURLINFOABOUT" = "8:https://github.com/nerrog/TaoTray"
+        "ARPPRODUCTICON" = "8:_6AC996F5C36E4BB9BE5D1E20B70BF315"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:"
+        "PostBuildEvent" = "8:$(ProjectDir)run_post_build_action.bat $(BuiltOuputPath)"
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"
@@ -351,7 +357,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_36BA8D135C2B481FAA42DAD8F3706A86"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B940194239FF461092788DC72C25EF0C"
             {
             "Name" = "8:TaoTray"
             "Arguments" = "8:"
@@ -359,13 +365,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E82B61BC908845F899C171B20D9AFF3C"
+            "Target" = "8:_08A57166EADF491298CFF6B04CD8D55C"
             "Folder" = "8:_971AF9E7D0E24B1CBFC8A92ECA2F0720"
             "WorkingFolder" = "8:_4AE05C74E5554497B6165F43DF3A6799"
             "Icon" = "8:_6AC996F5C36E4BB9BE5D1E20B70BF315"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_926080E7BB174FBF80BD62FA4737E2E2"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B9B34DB5980E49DAB7A4E0F9933DFEF2"
             {
             "Name" = "8:TaoTray"
             "Arguments" = "8:"
@@ -373,7 +379,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E82B61BC908845F899C171B20D9AFF3C"
+            "Target" = "8:_08A57166EADF491298CFF6B04CD8D55C"
             "Folder" = "8:_A2CCBC4CCE4B4EEB8A79CF3AD53AC99F"
             "WorkingFolder" = "8:_4AE05C74E5554497B6165F43DF3A6799"
             "Icon" = "8:_6AC996F5C36E4BB9BE5D1E20B70BF315"
@@ -721,9 +727,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E82B61BC908845F899C171B20D9AFF3C"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_08A57166EADF491298CFF6B04CD8D55C"
             {
-            "SourcePath" = "8:..\\obj\\Release\\net6.0-windows10.0.17763.0\\apphost.exe"
+            "SourcePath" = "8:..\\obj\\Release\\net8.0-windows10.0.17763.0\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4AE05C74E5554497B6165F43DF3A6799"
@@ -745,7 +751,34 @@
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{1D1F2129-D0BF-4754-B4BB-88B323913DDC}"
             "ShowKeyOutput" = "11:TRUE"
-            "PublishProfilePath" = "8:Properties\\PublishProfiles\\FolderProfile.pubxml"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E401338D5E0F4D939069EEAA1D7876F5"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4AE05C74E5554497B6165F43DF3A6799"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:Release|Any CPU"
+            "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
+            "OutputProjectGuid" = "8:{1D1F2129-D0BF-4754-B4BB-88B323913DDC}"
+            "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
                 }

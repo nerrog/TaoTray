@@ -30,3 +30,5 @@ record.StringData(1) = "DISABLEADVTSHORTCUTS"
 record.StringData(2) = "1"
 view.Modify viewModify, record
 database.Commit
+
+WScript.StdOut.Write "Set DISABLEADVTSHORTCUTS!"

@@ -11,7 +11,7 @@ Windows向け原神ステータス確認ソフト
 - English Support.
 
 # 要件(Requirements)
-- Windows10・11
+- Windows10・11 
 - HoyoLab通行証(ゲーム内アカウントと紐付け済み)
 
 .NETランタイムとWebViewはインストーラーからインストールされます
